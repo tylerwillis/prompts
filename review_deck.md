@@ -1,22 +1,4 @@
-# Prompts
-
-A collection of LLM prompts by Tyler Willis.
-
----
-
-## Deck Review
-
-> Get a thorough critique of a presentation deck using best practices from consulting, investor pitches, and sales decks.
-
-**Models:** Tested on Claude Opus 4.5 and GPT-5.1 Pro. Both deliver strong results and should be considered somewhat interchangable. I prefer Opus for speed, but would consider running both if I wanted comprehensive review notes.
-
-**Usage:** Attach your deck (PDF or images) along with this prompt.
-
-<details>
-<summary>⚡ <code>View prompt</code></summary>
-
-```
-Critique the attached deck using the following principles. When you give me feedback, assume that I'm not familiar with these principles and that I no longer have access to this document, so you likely have to explain the concepts to me in your feedback instead of just referencing them.
+Critique the attached deck using the following principles. When you give me feedback, assume that I'm not familiar with these principles and that I no longer have access to this document, so you likely have to explain the concepts to me in your feedback instead of just referencing them. 
 
 # Presentation Mastery: A Complete Ruleset
 
@@ -634,6 +616,3 @@ When evaluating a deck, lead with overall assessment before detailing specifics.
 | Evidence rigor | Very high | High (despite limited data) | Very high | Moderate |
 | Emotion | Moderate | High (but earned) | Moderate | High |
 | Key test | Can partner read exec summary and understand recommendation? | Would this get forwarded with positive note? | Do numbers tell compelling growth story? | Does this make them want a demo? |
-```
-
-</details>
