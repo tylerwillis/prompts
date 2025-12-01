@@ -646,13 +646,13 @@ When evaluating a deck, lead with overall assessment before detailing specifics.
 
 **Models:** Works well with any frontier model capable of deep research (Claude, ChatGPT, Gemini, Perplexity).
 
-**Usage:** Replace `[Ticker]` with the stock ticker symbol you want to analyze.
+**Usage:** Replace `[Company]` with the company you want to analyze.
 
 <details>
 <summary>⚡ <code>View prompt</code></summary>
 
 ```
-Analyze [Ticker] using the 13-point framework below.
+Analyze [Company] using the 13-point framework below.
 - Use only verifiable, factual information (annual reports, investor presentations, filings, earnings transcripts, and reputable financial sources).
 - Be concise, analytical, and concrete, with no filler or marketing language.
 

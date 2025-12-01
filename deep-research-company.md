@@ -1,4 +1,4 @@
-Analyze [Ticker] using the 13-point framework below.
+Analyze [Company] using the 13-point framework below.
 - Use only verifiable, factual information (annual reports, investor presentations, filings, earnings transcripts, and reputable financial sources).
 - Be concise, analytical, and concrete, with no filler or marketing language.
 
