@@ -68,6 +68,8 @@ The format fundamentally changes how you build.
 
 **Critical:** Pitch decks are frequently forwarded internally at firms. The partner you present to shares it with others who weren't in the room. Build for standalone clarity.
 
+**The Dual-Purpose Trap:** Many decks try to serve as both a live presentation AND a read-ahead—and fail at both. They're too dense to present without reading, but too sparse to stand alone. Choose your primary format. If you must serve both, keep the main slides sparse (just the key points you'll speak to) and put the detail in an appendix that works standalone when forwarded.
+
 ### 1.4 Know Your Time Constraint
 
 **Rule of thumb:** 1–2 minutes per slide for presented decks.
@@ -245,7 +247,15 @@ Every claim requires visible support. "Trust me" is not a source.
 
 **The jargon test:** Read each slide aloud. If you'd never say it in conversation, don't write it in a deck.
 
-**Dressed-up language signals insecurity.** When founders use inflated language, investors assume they're compensating for weak substance.
+**Dressed-up language signals insecurity.** When presenters use inflated language, the audience assumes they're compensating for weak substance.
+
+### 2.7 Ruthless Brevity
+
+Every slide must earn its place. Every word must earn its place. The test isn't "is this slide good?" but "would the deck be worse without it?" If the answer isn't a clear yes, cut it.
+
+**Shorter decks are always better.** A 10-slide deck that lands is superior to a 20-slide deck that's "complete." Audiences don't give credit for thoroughness—they give credit for clarity and respect for their time.
+
+**The burden of proof is on inclusion, not exclusion.** Don't ask "is there a reason to cut this?" Ask "is there a reason this must exist?" Default to cutting.
 
 ---
 
@@ -280,6 +290,8 @@ When deck-type guidance (Phase 4) conflicts with format guidance, use the lower 
 - 3–6 bullets per slide maximum
 - 15–18 words per bullet maximum
 - Avoid large paragraphs
+
+**The Presenter Test:** For live presentations, if you'd need to pause and let the audience read the slide—or worse, read it aloud to them—it's too dense. Presented slides should support your voice, not replace it.
 
 ### 3.3 Visual Hierarchy
 
@@ -469,6 +481,7 @@ Run these checks before finalizing any deck.
 | Final slide has clear milestones/next steps (not just "Questions?") | Warning |
 | Section dividers present for decks >15 slides | Suggestion |
 | No consecutive slides making essentially the same point | Warning |
+| Could the deck achieve its purpose with 20–30% fewer slides? | Warning |
 
 ### Slide-Level Checks
 
@@ -480,6 +493,9 @@ Run these checks before finalizing any deck.
 | Title is <5 words or lacks a verb | Suggestion |
 | Title is generic label ("Overview," "Background," "Summary") | Warning |
 | Title contains hyperbolic language body doesn't support | Warning |
+| This slide could be cut entirely without losing the argument | Warning |
+| For live presentations: The presenter is likely to read this slide verbatim | Warning |
+| For live presentations: This slide contains enough words that the audience is likely to read instead of listen to the presenter | Warning |
 
 ### Evidence Checks
 
@@ -533,6 +549,8 @@ When evaluating a deck, lead with overall assessment before detailing specifics.
 
 5. **Calibrate to stakes.** A $50M Series B deck needs harsher critique than an internal update.
 
+6. **Challenge the deck's length.** Don't just evaluate whether individual slides are well-constructed—ask whether the deck itself is longer than it needs to be. Explicitly consider: could slides be combined? Cut entirely? The best decks feel slightly too short, not slightly too long.
+
 ### Example Critique Opening
 
 > "You have the bones of a good story here, but this deck materially misses the mark. Three issues need immediate attention:
@@ -569,6 +587,8 @@ When evaluating a deck, lead with overall assessment before detailing specifics.
 - [ ] Word counts within format limits
 - [ ] No redundant slides
 - [ ] Speaker notes include transitions
+- [ ] Deck can't be meaningfully shortened (every slide earns its place)
+- [ ] For live presentations: slides can be presented without reading them
 
 ### For Investor Decks
 - [ ] "Why Now" explicitly answered
