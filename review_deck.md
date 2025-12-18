@@ -45,7 +45,71 @@ Structure your review as follows:
    - Specific slide references
    - How to fix it
 
-5. **What's Working:** Things the deck does well—acknowledge strengths, not just problems.
+5. **Density & Brevity Audit:** (Required)
+   - Total slide count: [X] — Could this deck achieve its goal with fewer slides? If yes, which slides should be cut or combined?
+   - List every slide that exceeds the word count ceiling for its type (see Phase 4)
+   - List every slide with bullets that run 2+ lines
+   - List slides that could be cut entirely without losing the argument
+
+6. **What's Working:** Things the deck does well—acknowledge strengths, not just problems.
+
+---
+
+## Calibration: Where to Push Hard
+
+LLMs tend to under-index on certain issues. Be aggressive on these:
+
+### 1. Brevity and Density
+**Assume every deck is too long and too dense until proven otherwise.** This is not "check if there's an issue"—it's "find where the issues are."
+
+You MUST:
+- Identify at least 3 slides that could be more concise (if fewer than 3 exist, explicitly state why each slide is already at minimum viable density)
+- Recommend cutting or combining at least 2 slides (if none can be cut, justify why each slide earns its place)
+- Flag every bullet that runs 2+ lines
+- Call out any slide exceeding the word count ceiling as an **Error**, not a Warning
+
+When in doubt, recommend cutting. The burden of proof is on inclusion.
+
+### 2. Deck-Level Genericness
+Don't just catch generic evidence—catch generic *stories*:
+- Could a competitor use this exact deck with their logo swapped in? If yes, the deck is too generic
+- Is the "why us" actually specific to this team, or could anyone claim it?
+- Is the "why now" a real market shift, or just "the market is big and growing"?
+- Does the ONE takeaway differentiate, or is it a category claim anyone could make?
+- A deck full of well-sourced evidence can still fail if the overall message is bland
+
+### 3. Specificity Over Polish
+Generic-but-polished is worse than rough-but-specific. Call out:
+- Pain points that any company in the space could claim
+- Value props that don't name concrete outcomes
+- "We're the best" without "at what, specifically, and for whom"
+
+---
+
+## Calibration: Where to Be Careful
+
+LLMs tend to over-correct on language. Be careful here:
+
+### Avoid Academic or Stilted Suggestions
+When suggesting rewrites—especially for titles—read them aloud. Would a presenter actually say this?
+
+**Bad LLM-style suggestions:**
+- "Enterprise Resource Optimization Through Automated Workflow Integration" ← sounds like a thesis title
+- "Significant Cost Reduction Is Achievable Via Process Consolidation" ← passive, bureaucratic
+- "The Problem: Inefficiencies in Current Operational Paradigms" ← jargon-laden
+
+**Good suggestions:**
+- "We cut processing time from 6 weeks to 3 days"
+- "Your reps spend 2 hours daily on data entry—we eliminate that"
+- "Three customers saved $2M in year one"
+
+Titles should be **speakable, punchy, and motivating**—not technically precise but lifeless.
+
+### Preserve the Presenter's Voice
+If the deck has a distinctive voice or energy, don't sand it down into corporate-speak. Flag problems, but suggest fixes that match the deck's existing tone.
+
+### Don't Optimize Locally at the Expense of Flow
+A title can be "correct" in isolation but break the narrative arc. Before suggesting a rewrite, check: does this new title flow from the previous slide and into the next?
 
 ---
 

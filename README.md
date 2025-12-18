@@ -16,29 +16,132 @@ A collection of LLM prompts by Tyler Willis.
 <summary>⚡ <code>View prompt</code></summary>
 
 ```
-Critique the attached deck using the following principles. When you give me feedback, assume that I'm not familiar with these principles and that I no longer have access to this document, so you likely have to explain the concepts to me in your feedback instead of just referencing them.
+# Deck Review Prompt
 
-# Presentation Mastery: A Complete Ruleset
+Critique the attached deck using the principles below. 
 
-A unified guide for creating high-impact presentations—consulting decks, pitch decks, sales presentations, and internal communications.
-
----
-
-## How to Use This Document
-
-**Before building slides:** Complete Phase 1 (Pre-Work)—this determines everything else.
-
-**While building:** Reference Phase 2 (Core Principles) and Phase 3 (Slide Construction).
-
-**For specific deck types:** See Phase 4 for tailored rules.
-
-**Before finalizing:** Run the Validation Checklist in Phase 5.
+**Important:** When giving feedback, assume I'm not familiar with these principles and no longer have access to this document. Explain the concepts in your feedback rather than just referencing them (e.g., don't say "this fails the Storyline Test"—explain what that means and why it matters).
 
 ---
 
-## Phase 1: Pre-Work (Complete Before Any Slides)
+## How to Review
 
-The quality of your deck is determined before you open your presentation software. Skip this phase, and no amount of polish will save you.
+**Step 1: Classify the deck.** Determine if this is a sales deck, customer success deck, investor pitch, consulting deck, or internal deck. This determines which standards apply.
+
+**Step 2: Internalize the relevant standards.** Before forming opinions, review:
+- Phase 2 (Core Principles)—especially the Storyline Test, Takeaway Titles, and Evidence Standards
+- Phase 4—the specific rules for this deck type
+- Phase 1—to assess whether foundational thinking was done
+
+**Step 3: Evaluate against those standards.**
+- Run the Storyline Test: Read only the slide titles in sequence—do they form a coherent argument?
+- Apply the Validation Checklist (Phase 5)
+- Note specific issues with slide references
+
+**Step 4: Structure your critique (Phase 6).** Lead with overall assessment, then provide comprehensive feedback organized by severity.
+
+---
+
+## Output Format
+
+Structure your review as follows:
+
+1. **Deck Type:** [Classification and brief rationale]
+
+2. **Overall Assessment:** [One of: Fundamentally Sound / Significant Gaps / Materially Misses / Needs Rebuild] + 2-3 sentence summary
+
+3. **Storyline Test:** Does reading the titles in sequence tell a coherent story? Quote the actual titles and assess.
+
+4. **Issues by Severity:** Provide comprehensive feedback, organized as:
+   - **Errors** — Must fix. Will cause confusion or undermine credibility.
+   - **Warnings** — Should fix. Won't break the deck, but weakens impact.
+   - **Suggestions** — Nice to have. Polish items for when time allows.
+   
+   For each issue, include:
+   - What's wrong
+   - Why it matters
+   - Specific slide references
+   - How to fix it
+
+5. **Density & Brevity Audit:** (Required)
+   - Total slide count: [X] — Could this deck achieve its goal with fewer slides? If yes, which slides should be cut or combined?
+   - List every slide that exceeds the word count ceiling for its type (see Phase 4)
+   - List every slide with bullets that run 2+ lines
+   - List slides that could be cut entirely without losing the argument
+
+6. **What's Working:** Things the deck does well—acknowledge strengths, not just problems.
+
+---
+
+## Calibration: Where to Push Hard
+
+LLMs tend to under-index on certain issues. Be aggressive on these:
+
+### 1. Brevity and Density
+**Assume every deck is too long and too dense until proven otherwise.** This is not "check if there's an issue"—it's "find where the issues are."
+
+You MUST:
+- Identify at least 3 slides that could be more concise (if fewer than 3 exist, explicitly state why each slide is already at minimum viable density)
+- Recommend cutting or combining at least 2 slides (if none can be cut, justify why each slide earns its place)
+- Flag every bullet that runs 2+ lines
+- Call out any slide exceeding the word count ceiling as an **Error**, not a Warning
+
+When in doubt, recommend cutting. The burden of proof is on inclusion.
+
+### 2. Deck-Level Genericness
+Don't just catch generic evidence—catch generic *stories*:
+- Could a competitor use this exact deck with their logo swapped in? If yes, the deck is too generic
+- Is the "why us" actually specific to this team, or could anyone claim it?
+- Is the "why now" a real market shift, or just "the market is big and growing"?
+- Does the ONE takeaway differentiate, or is it a category claim anyone could make?
+- A deck full of well-sourced evidence can still fail if the overall message is bland
+
+### 3. Specificity Over Polish
+Generic-but-polished is worse than rough-but-specific. Call out:
+- Pain points that any company in the space could claim
+- Value props that don't name concrete outcomes
+- "We're the best" without "at what, specifically, and for whom"
+
+---
+
+## Calibration: Where to Be Careful
+
+LLMs tend to over-correct on language. Be careful here:
+
+### Avoid Academic or Stilted Suggestions
+When suggesting rewrites—especially for titles—read them aloud. Would a presenter actually say this?
+
+**Bad LLM-style suggestions:**
+- "Enterprise Resource Optimization Through Automated Workflow Integration" ← sounds like a thesis title
+- "Significant Cost Reduction Is Achievable Via Process Consolidation" ← passive, bureaucratic
+- "The Problem: Inefficiencies in Current Operational Paradigms" ← jargon-laden
+
+**Good suggestions:**
+- "We cut processing time from 6 weeks to 3 days"
+- "Your reps spend 2 hours daily on data entry—we eliminate that"
+- "Three customers saved $2M in year one"
+
+Titles should be **speakable, punchy, and motivating**—not technically precise but lifeless.
+
+### Preserve the Presenter's Voice
+If the deck has a distinctive voice or energy, don't sand it down into corporate-speak. Flag problems, but suggest fixes that match the deck's existing tone.
+
+### Don't Optimize Locally at the Expense of Flow
+A title can be "correct" in isolation but break the narrative arc. Before suggesting a rewrite, check: does this new title flow from the previous slide and into the next?
+
+---
+
+# Presentation Principles Reference
+
+The following principles define what good looks like. Use them to evaluate the deck and explain your feedback.
+
+---
+
+## Phase 1: Pre-Work Principles
+
+*For reviewers: Use this section to infer whether the deck creator did their homework. A deck that fails here has foundational problems—no amount of slide polish will fix it.*
+
+The quality of a deck is determined before the creator opens their presentation software. When these fundamentals are missing, it shows.
 
 ### 1.1 Define the Audience
 
@@ -52,7 +155,9 @@ Answer these questions explicitly:
 | **What's their default skepticism?** | Determines your evidence burden |
 | **Who's the real decision-maker?** | In groups, structure for the person whose opinion matters most |
 
-> **Example:** A Series A pitch to a healthcare-focused VC can skip "healthcare is a large market." A pitch to a generalist fund cannot.
+> **Example (Pitch):** A Series A pitch to a healthcare-focused VC can skip "healthcare is a large market." A pitch to a generalist fund cannot.
+
+> **Example (Sales/CS):** A deck for your existing customer's technical team can skip product basics. A deck for their executive sponsor who just joined cannot.
 
 ### 1.2 Define the Objective
 
@@ -84,7 +189,9 @@ The format fundamentally changes how you build.
 
 **The "Read Alone Test":** If you leave the room, can the reader understand the slide 100% on their own? Read-aheads must pass this test.
 
-**Critical:** Pitch decks are frequently forwarded internally at firms. The partner you present to shares it with others who weren't in the room. Build for standalone clarity.
+**Critical:** Decks are frequently forwarded internally. The person you present to shares it with others who weren't in the room—investors forward to partners, buyers forward to stakeholders, champions forward to decision-makers. Build for standalone clarity.
+
+**The Dual-Purpose Trap:** Many decks try to serve as both a live presentation AND a read-ahead—and fail at both. They're too dense to present without reading, but too sparse to stand alone. Choose your primary format. If you must serve both, keep the main slides sparse (just the key points you'll speak to) and put the detail in an appendix that works standalone when forwarded.
 
 ### 1.4 Know Your Time Constraint
 
@@ -105,13 +212,21 @@ For each objection, decide:
 
 ### 1.6 Design the Emotional Journey
 
-Logic gets consideration. Emotion gets action. Great decks need both.
+Your audience isn't waiting eagerly to be convinced. Investors are bored—they've seen three pitches today. Buyers are skeptical—they've been sold to before. Attendees are distracted—this is one of many meetings.
 
-**How should they feel at start vs. end?**
+Your first job is earning attention. Only then can logic get consideration and emotion drive action.
+
+**Once you have their attention, where do you take them?**
 
 > **Pitch deck:** Curious → Excited → Confident → Urgent
 
+> **Sales deck:** Skeptical → Intrigued → Convinced → Ready to act
+
+> **CS deck:** Uncertain → Informed → Capable → Enthusiastic
+
 > **Consulting deck:** Concerned → Understood → Relieved → Aligned
+
+> **Internal deck:** Unclear → Informed → Aligned → Decisive
 
 **Earned vs. Manufactured Emotion**
 
@@ -123,7 +238,7 @@ There's a critical difference:
 
 > **Earned:** Title says "Customer churn has reached emergency levels" supported by "38% of customers churned in Q2; $4.2M monthly revenue lost to competitors."
 
-Sophisticated readers—investors, executives—feel manipulated when emotion is manufactured. They've seen hundreds of decks.
+Sophisticated readers—investors, executives, buyers—feel manipulated when emotion is manufactured. They've seen hundreds of decks and can spot when headlines overclaim or evidence is missing.
 
 ---
 
@@ -263,7 +378,15 @@ Every claim requires visible support. "Trust me" is not a source.
 
 **The jargon test:** Read each slide aloud. If you'd never say it in conversation, don't write it in a deck.
 
-**Dressed-up language signals insecurity.** When founders use inflated language, investors assume they're compensating for weak substance.
+**Dressed-up language signals insecurity.** When presenters use inflated language, the audience assumes they're compensating for weak substance.
+
+### 2.7 Ruthless Brevity
+
+Every slide must earn its place. Every word must earn its place. The test isn't "is this slide good?" but "would the deck be worse without it?" If the answer isn't a clear yes, cut it.
+
+**Shorter decks are always better.** A 10-slide deck that lands is superior to a 20-slide deck that's "complete." Audiences don't give credit for thoroughness—they give credit for clarity and respect for their time.
+
+**The burden of proof is on inclusion, not exclusion.** Don't ask "is there a reason to cut this?" Ask "is there a reason this must exist?" Default to cutting.
 
 ---
 
@@ -283,7 +406,9 @@ The audience should grasp the slide's point within 3 seconds. If they're still p
 
 ### 3.2 Text Density by Format
 
-**The goal is always the fewest words that achieve the slide's purpose.** The numbers below are ceilings—not targets. Hitting the maximum is not a goal; it's a limit.
+**The goal is always the fewest words that achieve the slide's purpose.** 
+
+**Critical framing:** Every density number in this document is a ceiling, not a target. Most slides should be well under the ceiling. If you're routinely hitting the maximum, you're too dense. A great deck has mostly sparse slides with occasional denser slides for evidence or detail. If you need to prove something, try to do it with tables, charts, images, or other visual examples.
 
 | Context | Maximum Words |
 |---------|---------------|
@@ -292,12 +417,14 @@ The audience should grasp the slide's point within 3 seconds. If they're still p
 | Executive summary | 150 words |
 | Appendix/detail | As needed |
 
-When deck-type guidance (Phase 4) conflicts with format guidance, use the lower number.
+When deck-type guidance (Phase 4) conflicts with format guidance, use the lower number. (Exception: Consulting decks are typically read-aheads or hybrids, not pure live presentations—use the Consulting density guidance, not the live presentation cap.)
 
 **Bullet guidelines:**
 - 3–6 bullets per slide maximum
 - 15–18 words per bullet maximum
 - Avoid large paragraphs
+
+**The Presenter Test:** For live presentations, if you'd need to pause and let the audience read the slide—or worse, read it aloud to them—it's too dense. Presented slides should support your voice, not replace it.
 
 ### 3.3 Visual Hierarchy
 
@@ -379,8 +506,10 @@ Sets up the next slide's title
 **Requirements:**
 - Executive summary within first 3 slides stating the recommendation
 - Final slides must include clear next steps, owners, and timing
-- Higher density acceptable (80–120 words per slide)
+- Higher density is acceptable, but still keep content as brief as possible
 - Rigorous evidence; cite sources; show methodology
+
+**Density:** Most slides 20–60 words. Ceiling of 120 for dense analysis slides. Consulting is the exception where higher density is expected—but even here, less is better.
 
 ### 4.2 Investor Pitch Deck
 
@@ -444,7 +573,9 @@ Structure:
 - Title = declarative milestone statement
 - Body = Explain why you can achieve that impressive milestone. You can use different proof points. One example: (1) existing traction, (2) execution readiness, (3) pipeline/momentum
 
-**Density:** 60–90 words per slide (lighter than consulting, but rich enough to work as read-ahead)
+**Density by stage:**
+- **Seed/Early:** Most slides 10–20 words. Ceiling of ~100 for dense slides (testimonials, detailed traction). Seed decks should feel almost like sales decks—visual, punchy, easy to absorb.
+- **Growth:** Most slides 20–40 words. Ceiling of ~100. More data expected, but still visual-first. Don't let "we have more to show" become "we crammed everything in."
 
 ### 4.3 Sales Deck
 
@@ -452,20 +583,153 @@ Structure:
 
 **Structure:** Pain → Solution → Proof → Action
 
-**Emphasis:**
-- Low density, visually driven
-- High emotion—pain relief, success stories
-- ROI, case studies, social proof
+**The Core Shift:**
+
+The buyer should feel: "They understand my problem better than I do. And they've solved it for people like me."
+
+1. **Pain must feel specific and urgent.**
+   - Generic pain ("teams struggle with efficiency") doesn't land
+   - Specific pain ("your reps spend 2 hours daily on data entry instead of selling") creates recognition
+   - Test: Would the buyer nod and say "that's exactly right"?
+
+2. **Solution should feel like relief, not features.**
+   - Don't list what the product does—show what the buyer's life looks like after
+   - Lead with outcomes, not capabilities
+
+3. **Proof must be relevant and believable.**
+   - Logos matter, but only if they're peers (a startup doesn't care that you sold to IBM)
+   - Metrics need context: "Reduced onboarding time by 60%" beats "Saves time"
+   - Quotes should sound human, not like marketing wrote them
+
+4. **ROI must be concrete and credible.**
+   - Vague ROI ("significant savings") is ignored
+   - Specific ROI ("$240K annual savings based on 20 reps × 2 hrs/day × $50/hr") is evaluated
+   - If the number sounds too good, show the math
+
+**Common failures:**
+- Leading with product features instead of buyer pain
+- Pain section that's generic or feels copied from competitors
+- ROI claims that seem inflated with no supporting methodology
+- No social proof, or proof from irrelevant customer types
+- Dense slides that require reading—sales decks should be almost entirely visual
+- No clear call to action or next step
+
+**Does the deck support qualification?**
+
+Use a MEDDIC lens when reviewing:
+- **Metrics:** Does it show quantified value the buyer will care about?
+- **Economic Buyer:** Is this built for the person who can say yes, or just the user/evaluator?
+- **Decision Criteria:** Does it address what they're actually evaluating on?
+- **Decision Process:** Does it acknowledge their timeline and process?
+- **Identify Pain:** Is the pain specific and tied to business impact?
+- **Champion Enablement:** Can your internal champion use this deck to sell for you when you're not in the room?
+
+**Addressing alternatives:**
+- Don't pretend competitors don't exist—sophisticated buyers are evaluating options
+- Position against the status quo (doing nothing) as much as against competitors
+- If you mention competitors, be factual and specific—vague FUD backfires
+- Consider a "Why us vs. alternatives" backup slide for when it comes up
+
+**Creating urgency (without being pushy):**
+- What's the cost of inaction? Make it concrete.
+- Is there a forcing function (contract renewal, budget cycle, regulatory deadline)?
+- Frame the timeline around their goals, not your quota
+- "Why now" matters for sales just as much as for fundraising
+
+**Champion enablement:**
+- Can your champion present this deck without you in the room?
+- Does it answer the questions other stakeholders will ask?
+- Is it simple enough that a non-expert can explain it?
+- Consider: what will the CFO ask? The legal team? The IT security team? Build backup slides for these.
+
+**Density:** Most slides 5–15 words. Ceiling of 20. If it can't be absorbed in 3 seconds while you're talking, it's too dense.
 
 **Key test:** Does this make them want to see a demo?
 
-### 4.4 Internal / Update Deck
+### 4.4 Internal Deck
 
 **Typical length:** 5–15 slides
 
 **Structure:** Progress → Insights → Decisions needed
 
-**Key test:** Does this enable a productive discussion?
+**The Core Shift:**
+
+Internal decks exist to drive decisions, not to inform. If no decision is needed, it should be an email.
+
+1. **Lead with what you need from the room.**
+   - State the decision or input you're seeking in the first 2 slides
+   - Don't make them sit through 10 slides wondering "why am I here?"
+
+2. **Progress should be honest, not optimistic.**
+   - "Green/yellow/red" status only works if yellow and red actually appear
+   - Bad news delivered early is useful; bad news buried is a trust problem
+   - Test: Would someone who only reads this deck have an accurate picture?
+
+3. **Insights should be non-obvious.**
+   - Don't restate what the data shows—explain what it means
+   - "Revenue is up 15%" is data. "Revenue is up 15%, but entirely from one customer we're at risk of losing" is insight.
+
+4. **Decisions needed must be specific and actionable.**
+   - "We need to discuss resourcing" is not a decision
+   - "We need to add 2 engineers to this project or push the launch 6 weeks" is a decision
+   - Include clear options with trade-offs when possible
+
+**Common failures:**
+- Update that's purely informational with no decision point
+- Burying the ask at the end instead of leading with it
+- Status that's always green (signals the presenter isn't being honest)
+- Insights that are just observations, not implications
+- Missing context that forces executives to ask basic questions
+- Too much detail—internal decks should enable discussion, not replace it
+
+**Density:** Most slides 20–40 words. Ceiling of 80 for context-heavy slides. Denser than sales, but still built for discussion, not reading.
+
+**Key test:** Does this deck make the decision easier to reach?
+
+### 4.5 Customer Success Deck
+
+**Typical length:** 8–20 slides (varies by use case: kickoff, QBR, training)
+
+**Structure varies by purpose:**
+- **Kickoff:** Goals → Plan → Milestones → How we'll work together
+- **QBR:** Results → Insights → Recommendations → Next quarter priorities
+- **Training:** Context → Concept → Demo/Practice → Resources
+
+**The Core Shift:**
+
+The customer already bought, but you're still selling—you're selling their continued belief that they made the right choice. Complacency kills retention. Keep momentum high, keep them engaged, keep them winning. The difference from sales: you prove value through their results, not your pitch.
+
+1. **Lead with their goals, not your product.**
+   - Start with what they're trying to achieve, not what you offer
+   - Frame everything through their success metrics, not your usage metrics
+   - Test: Could this deck work for a competitor's customer with minor edits? If yes, it's too generic.
+
+2. **Make them feel smart, not overwhelmed.**
+   - Training decks should build confidence, not showcase complexity
+   - Teach them new skills tied to your unique value proposition
+   - Introduce concepts progressively—don't front-load everything
+   - When in doubt, cut scope. They can always learn more later.
+
+3. **Be honest about what's working and what isn't.**
+   - QBRs that only show green metrics aren't useful
+   - Surface challenges early and bring recommendations, not just observations
+   - Customers respect partners who tell them hard truths
+
+4. **End with clear, achievable next steps.**
+   - What should they do this week/month/quarter?
+   - Who owns what?
+   - Make the path forward feel manageable, not daunting
+
+**Common failures:**
+- Deck feels like a sales pitch to someone who already bought
+- QBR that's just a data dump with no insight or recommendations
+- Training that's comprehensive but overwhelming
+- Generic content that doesn't reference their specific goals or situation
+- No clear next steps or ownership
+
+**Density:** Most slides 10–20 words. Ceiling of 80 for QBRs with detailed results. Training should be highly visual; QBRs can be slightly denser.
+
+**Key test:** Does this make the customer feel more capable and confident than before?
 
 ---
 
@@ -487,6 +751,7 @@ Run these checks before finalizing any deck.
 | Final slide has clear milestones/next steps (not just "Questions?") | Warning |
 | Section dividers present for decks >15 slides | Suggestion |
 | No consecutive slides making essentially the same point | Warning |
+| Could the deck achieve its purpose with 20–30% fewer slides? | Warning |
 
 ### Slide-Level Checks
 
@@ -498,6 +763,9 @@ Run these checks before finalizing any deck.
 | Title is <5 words or lacks a verb | Suggestion |
 | Title is generic label ("Overview," "Background," "Summary") | Warning |
 | Title contains hyperbolic language body doesn't support | Warning |
+| This slide could be cut entirely without losing the argument | Warning |
+| For live presentations: The presenter is likely to read this slide verbatim | Warning |
+| For live presentations: This slide contains enough words that the audience is likely to read instead of listen to the presenter | Warning |
 
 ### Evidence Checks
 
@@ -551,6 +819,8 @@ When evaluating a deck, lead with overall assessment before detailing specifics.
 
 5. **Calibrate to stakes.** A $50M Series B deck needs harsher critique than an internal update.
 
+6. **Challenge the deck's length.** Don't just evaluate whether individual slides are well-constructed—ask whether the deck itself is longer than it needs to be. Explicitly consider: could slides be combined? Cut entirely? The best decks feel slightly too short, not slightly too long.
+
 ### Example Critique Opening
 
 > "You have the bones of a good story here, but this deck materially misses the mark. Three issues need immediate attention:
@@ -587,6 +857,8 @@ When evaluating a deck, lead with overall assessment before detailing specifics.
 - [ ] Word counts within format limits
 - [ ] No redundant slides
 - [ ] Speaker notes include transitions
+- [ ] Deck can't be meaningfully shortened (every slide earns its place)
+- [ ] For live presentations: slides can be presented without reading them
 
 ### For Investor Decks
 - [ ] "Why Now" explicitly answered
@@ -594,6 +866,25 @@ When evaluating a deck, lead with overall assessment before detailing specifics.
 - [ ] Market sizing is bottom-up
 - [ ] Final slide leads with milestones, not raise amount
 - [ ] No label-only titles anywhere
+
+### For Sales Decks
+- [ ] Pain is specific to the buyer, not generic
+- [ ] Solution framed as outcomes, not features
+- [ ] Proof comes from relevant peers (not just big logos)
+- [ ] ROI claim has visible math
+- [ ] Clear call to action / next step
+
+### For CS Decks
+- [ ] Leads with their goals, not your product
+- [ ] Content references their specific situation
+- [ ] Honest about what's working and what isn't
+- [ ] Next steps are clear, achievable, with ownership
+
+### For Internal Decks
+- [ ] Decision or input needed stated in first 2 slides
+- [ ] Progress is honest (yellow/red appear when warranted)
+- [ ] Insights explain implications, not just data
+- [ ] Options include trade-offs
 
 ---
 
@@ -627,13 +918,14 @@ When evaluating a deck, lead with overall assessment before detailing specifics.
 
 ## Appendix B: Deck Type Comparison
 
-| Attribute | Consulting | Investor (Seed) | Investor (Growth) | Sales |
-|-----------|------------|-----------------|-------------------|-------|
-| Length | 20–50+ slides | 10–15 slides | 15–25 slides | 8–15 slides |
-| Density | 80–120 words | 60–90 words | 75–100 words | 25–50 words |
-| Evidence rigor | Very high | High (despite limited data) | Very high | Moderate |
-| Emotion | Moderate | High (but earned) | Moderate | High |
-| Key test | Can partner read exec summary and understand recommendation? | Would this get forwarded with positive note? | Do numbers tell compelling growth story? | Does this make them want a demo? |
+| Attribute | Consulting | Investor (Seed) | Investor (Growth) | Sales | CS | Internal |
+|-----------|------------|-----------------|-------------------|-------|-----|----------|
+| Length | 20–50+ slides | 10–15 slides | 15–25 slides | 8–15 slides | 8–20 slides | 5–15 slides |
+| Typical density | 40–60 words | 10–20 words | 20–40 words | 5–15 words | 10–20 words | 20–40 words |
+| Ceiling density | 120 words | 100 words | 100 words | 20 words | 80 words | 80 words |
+| Evidence rigor | Very high | High (despite limited data) | Very high | Moderate | Moderate | High |
+| Emotion | Moderate | High (but earned) | Moderate | High | Warm, empowering | Low |
+| Key test | Can partner read exec summary and understand recommendation? | Would this get forwarded with positive note? | Do numbers tell compelling growth story? | Does this make them want a demo? | Does this make them feel capable? | Does this make the decision easier? |
 ```
 
 </details>
