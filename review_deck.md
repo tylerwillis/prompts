@@ -1,28 +1,65 @@
-Critique the attached deck using the following principles. When you give me feedback, assume that I'm not familiar with these principles and that I no longer have access to this document, so you likely have to explain the concepts to me in your feedback instead of just referencing them.
+# Deck Review Prompt
 
-Before we start, look at the deck and decide what type of presentation it is: is it a sales deck, a customer success deck, a fundraising deck, a consulting deck, or an internal deck? That is critical information to know what sections of the ruleset matter most in your review.
+Critique the attached deck using the principles below. 
 
-# Presentation Mastery: A Complete Ruleset
-
-A unified guide for creating high-impact presentations—consulting decks, pitch decks, sales presentations, and internal communications.
+**Important:** When giving feedback, assume I'm not familiar with these principles and no longer have access to this document. Explain the concepts in your feedback rather than just referencing them (e.g., don't say "this fails the Storyline Test"—explain what that means and why it matters).
 
 ---
 
-## How to Use This Document
+## How to Review
 
-**Before building slides:** Complete Phase 1 (Pre-Work)—this determines everything else.
+**Step 1: Classify the deck.** Determine if this is a sales deck, customer success deck, investor pitch, consulting deck, or internal deck. This determines which standards apply.
 
-**While building:** Reference Phase 2 (Core Principles) and Phase 3 (Slide Construction).
+**Step 2: Internalize the relevant standards.** Before forming opinions, review:
+- Phase 2 (Core Principles)—especially the Storyline Test, Takeaway Titles, and Evidence Standards
+- Phase 4—the specific rules for this deck type
+- Phase 1—to assess whether foundational thinking was done
 
-**For specific deck types:** See Phase 4 for tailored rules.
+**Step 3: Evaluate against those standards.**
+- Run the Storyline Test: Read only the slide titles in sequence—do they form a coherent argument?
+- Apply the Validation Checklist (Phase 5)
+- Note specific issues with slide references
 
-**Before finalizing:** Run the Validation Checklist in Phase 5.
+**Step 4: Structure your critique (Phase 6).** Lead with overall assessment, then provide comprehensive feedback organized by severity.
 
 ---
 
-## Phase 1: Pre-Work (Complete Before Any Slides)
+## Output Format
 
-The quality of your deck is determined before you open your presentation software. Skip this phase, and no amount of polish will save you.
+Structure your review as follows:
+
+1. **Deck Type:** [Classification and brief rationale]
+
+2. **Overall Assessment:** [One of: Fundamentally Sound / Significant Gaps / Materially Misses / Needs Rebuild] + 2-3 sentence summary
+
+3. **Storyline Test:** Does reading the titles in sequence tell a coherent story? Quote the actual titles and assess.
+
+4. **Issues by Severity:** Provide comprehensive feedback, organized as:
+   - **Errors** — Must fix. Will cause confusion or undermine credibility.
+   - **Warnings** — Should fix. Won't break the deck, but weakens impact.
+   - **Suggestions** — Nice to have. Polish items for when time allows.
+   
+   For each issue, include:
+   - What's wrong
+   - Why it matters
+   - Specific slide references
+   - How to fix it
+
+5. **What's Working:** Things the deck does well—acknowledge strengths, not just problems.
+
+---
+
+# Presentation Principles Reference
+
+The following principles define what good looks like. Use them to evaluate the deck and explain your feedback.
+
+---
+
+## Phase 1: Pre-Work Principles
+
+*For reviewers: Use this section to infer whether the deck creator did their homework. A deck that fails here has foundational problems—no amount of slide polish will fix it.*
+
+The quality of a deck is determined before the creator opens their presentation software. When these fundamentals are missing, it shows.
 
 ### 1.1 Define the Audience
 
