@@ -32,7 +32,7 @@ Structure your review as follows:
 
 2. **Overall Assessment:** [One of: Fundamentally Sound / Significant Gaps / Materially Misses / Needs Rebuild] + 2-3 sentence summary
 
-3. **Storyline Test:** Does reading the titles in sequence tell a coherent story? Quote the actual titles and assess.
+3. **Storyline Test:** Does reading the titles in sequence tell a coherent story? Quote the actual titles and assess as **Pass** (titles alone tell the story), **Warning** (story is logically sound but titles need polish), or **Error** (no discernible story or titles contradict content).
 
 4. **Issues by Severity:** Provide comprehensive feedback, organized as:
    - **Errors** — Must fix. Will cause confusion or undermine credibility.
@@ -70,6 +70,8 @@ You MUST:
 
 When in doubt, recommend cutting. The burden of proof is on inclusion.
 
+**Exception: Situation and pain slides.** These earn their place through emotional impact, not information. A weak pain slide usually needs strengthening, not removal. See "Don't Reflexively Cut Situation/Pain Slides" in the next section before recommending cuts here.
+
 ### 2. Deck-Level Genericness
 Don't just catch generic evidence—catch generic *stories*:
 - Could a competitor use this exact deck with their logo swapped in? If yes, the deck is too generic
@@ -89,6 +91,29 @@ Generic-but-polished is worse than rough-but-specific. Call out:
 ## Calibration: Where to Be Careful
 
 LLMs tend to over-correct on language. Be careful here:
+
+### Don't Reflexively Cut Situation/Pain Slides
+
+Many decks follow a Situation-Complication-Question-Answer (SCQA) structure. The Situation establishes context; the Complication introduces the problem. In sales, this is sometimes called "dragging them through the glass"—making the pain vivid enough that the audience actively wants a solution.
+
+These slides earn their place through **emotional impact**, not information density. A weak pain slide doesn't mean "cut it"—it usually means "make it land harder."
+
+**Before recommending to cut a situation or pain slide, ask:**
+- Is this slide doing necessary setup that later slides depend on?
+- Would removing it make the solution feel less urgent or relevant?
+- Is the issue that the slide exists, or that it's too generic/abstract to land?
+
+**The right fix is usually:**
+- Make the pain more specific and vivid (not "teams struggle" but "reps spend 2 hours daily on data entry")
+- Add concrete evidence of the cost (dollars, time, churn, risk)
+- Tighten the language so it hits harder in fewer words
+
+**Only recommend cutting when:**
+- The situation is already clear from context (audience knows the problem well)
+- Multiple slides make the same pain point redundantly
+- The pain isn't actually connected to what you're selling
+
+When critiquing, distinguish between "this slide is unnecessary" and "this slide isn't landing—here's how to strengthen it."
 
 ### Avoid Academic or Stilted Suggestions
 When suggesting rewrites—especially for titles—read them aloud. Would a presenter actually say this?
@@ -230,20 +255,37 @@ These apply to every deck, regardless of type.
 
 ### 2.1 The Storyline Test
 
-**Read only your slide titles in sequence. They must form a coherent, persuasive argument.**
+**Read only your slide titles in sequence. They should form a coherent, persuasive argument.**
 
-If someone can't understand your recommendation from titles alone, the deck fails. This is the single most important test.
+The gold standard: someone can understand your recommendation from titles alone. This is an important structural test.
 
-> **Failing the test:**
+**How to assess:**
+
+| Result | When to Apply |
+|--------|---------------|
+| **Pass** | Titles alone tell the complete story. A reader could skip the slide bodies and understand the argument. |
+| **Warning** | The story is logically sound, but titles don't fully articulate it. A quick skim of titles + slide content reveals a coherent argument—it's just not self-evident from titles alone. |
+| **Error** | No discernible story exists. Titles are pure labels with no logical flow, OR the actual content contradicts the narrative the titles suggest. |
+
+> **Error-level (no story):**
 > 1. Introduction
 > 2. Market Overview
 > 3. Our Solution
 > 4. Team
 > 5. Ask
 >
-> *These are labels, not a story.*
+> *These are labels, not a story. Even skimming the slides, there's no clear argument thread.*
 
-> **Passing the test:**
+> **Warning-level (story exists, titles need work):**
+> 1. Hotels are expensive.
+> 2. Our community-driven approach offers a better experience AND better economics.
+> 3. The risks of community-driven stays: variance and safety.
+> 4. Our customers rate us 50% higher than hotels on variance and safety.
+> 5. We're growing 50% month-over-month.
+>
+> *The logical arc is there (problem → gap → solution → proof → future), but titles don't fully articulate it. A reader needs to skim slide content to get the argument.*
+
+> **Pass (titles tell the story):**
 > 1. Enterprise security teams waste 40% of time on false positives
 > 2. Existing solutions trade accuracy for speed—teams must choose
 > 3. Our AI triages alerts with 95% accuracy in real-time
@@ -729,7 +771,7 @@ Run these checks before finalizing any deck.
 | Check | Level |
 |-------|-------|
 | Executive summary within first 3 slides states main conclusion | Warning |
-| Reading titles in sequence forms coherent argument | Warning |
+| Reading titles in sequence forms coherent argument | Warning (or Error if no story exists—see 2.1) |
 | Final slide has clear milestones/next steps (not just "Questions?") | Warning |
 | Section dividers present for decks >15 slides | Suggestion |
 | No consecutive slides making essentially the same point | Warning |
@@ -745,7 +787,7 @@ Run these checks before finalizing any deck.
 | Title is <5 words or lacks a verb | Suggestion |
 | Title is generic label ("Overview," "Background," "Summary") | Warning |
 | Title contains hyperbolic language body doesn't support | Warning |
-| This slide could be cut entirely without losing the argument | Warning |
+| This slide could be cut entirely without losing the argument (but for situation/pain slides, consider "strengthen" before "cut") | Warning |
 | For live presentations: The presenter is likely to read this slide verbatim | Warning |
 | For live presentations: This slide contains enough words that the audience is likely to read instead of listen to the presenter | Warning |
 
