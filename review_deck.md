@@ -306,7 +306,7 @@ The gold standard: someone can understand your recommendation from titles alone.
 
 Structure from the top down: answer first, then evidence.
 
-```
+~~~
                     [Governing Thought]
                     Your main conclusion
                            ↓
@@ -315,7 +315,7 @@ Structure from the top down: answer first, then evidence.
    [Key Argument 1]   [Key Argument 2]   [Key Argument 3]
         ↓                  ↓                  ↓
    [Evidence]         [Evidence]         [Evidence]
-```
+~~~
 
 **The Governing Thought** is your single most important conclusion—appears in your executive summary and is restated at the end. (This is the same as the "ONE takeaway" from Phase 1.)
 
@@ -489,7 +489,7 @@ Charts must earn their place. Every chart needs a "so what."
 
 Never just repeat the slide. Structure for glanceability:
 
-```
+~~~
 [TRANSITION] (1 sentence)
 "Moving on from [previous concept]..."
 
@@ -504,7 +504,7 @@ Stats or anecdotes NOT on the slide—adds value to listening
 
 [BRIDGE] (1 sentence)
 Sets up the next slide's title
-```
+~~~
 
 **Additional guidance:**
 - Mark optional content: "[If time] mention the European pilot"
